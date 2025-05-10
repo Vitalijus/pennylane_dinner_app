@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   require "./app/services/elasticsearch/ingridients_query.rb"
-  require "kaminari"
 
   def home
       elasticsearch = Elasticsearch::IngridientsQuery.new(params[:ingredients])

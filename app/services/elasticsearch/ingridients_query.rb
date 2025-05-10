@@ -13,8 +13,8 @@ class Elasticsearch::IngridientsQuery < Elasticsearch::Base
   private
 
   def format_ingredients(ingridients)
-    return [] if ingridients.nil?
-    ingridients.split(/\s*,\s*/)
+    return "" if ingridients.nil?
+    ingridients
   end
 
   def recipes_list(response)
@@ -45,9 +45,12 @@ class Elasticsearch::IngridientsQuery < Elasticsearch::Base
   def query
     {
       query: {
-        terms: {
-          "ingredients.keyword": @ingridients,
-          boost: 1.0
+        match: {
+          ingredients: {
+            query: @ingridients,
+            operator: "and",
+            fuzziness: "AUTO"
+          }
         }
       },
       size: 1000

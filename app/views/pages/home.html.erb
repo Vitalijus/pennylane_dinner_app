@@ -1,15 +1,15 @@
 <div class="search-container">
   <div class="search-header">
-    Type in comma separated ingridients e.g.: 1 cup all-purpose flour, 1 cup yellow cornmeal, bread
+    This is a full text search. Type in ingredients.
   </div>
 
   <div class="search-form">
     <%= form_with(url: root_url, method: 'get') do |form| %>
       <div class="search-field">
         <div class="field-label">
-          Ingridients:
+          Ingredients:
         </div>
-        <%= form.text_field :ingredients, class: "search-form-field", placeholder: "1 cup yellow cornmeal, bread", value: params[:ingredients] %>
+        <%= form.text_field :ingredients, class: "search-form-field", placeholder: "e.g. corn bread milk", value: params[:ingredients] %>
       </div>
 
       <div class="search-btn">

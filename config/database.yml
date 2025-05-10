@@ -84,6 +84,7 @@ production:
     database: dinner_app_production
     username: dinner_app
     password: <%= ENV["DINNER_APP_DATABASE_PASSWORD"] %>
+    url: <%= ENV["DATABASE_URL"] %>
   cache:
     <<: *primary_production
     database: dinner_app_production_cache

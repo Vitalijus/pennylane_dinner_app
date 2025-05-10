@@ -1,4 +1,11 @@
 <h6>Home page</h6>
+
 <% @recipes[:recipes].each do |recipe| %>
   <div><%= recipe[:title] %></div>
+<% end %>
+
+<%= form_with(url: root_url, method: 'get') do |form| %>
+  <%= form.text_field :ingredients %>
+
+  <%= form.submit "Submit" %>
 <% end %>

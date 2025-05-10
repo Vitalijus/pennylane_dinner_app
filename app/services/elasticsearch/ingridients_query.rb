@@ -6,13 +6,16 @@
 class Elasticsearch::IngridientsQuery < Elasticsearch::Base
   attr_reader :errors, :result
 
-  # MINIMUM_SHOULD_MATCH = 1
-
   def initialize(ingridients)
-    @ingridients = ingridients
+    @ingridients = format_ingredients(ingridients)
   end
 
   private
+
+  def format_ingredients(ingridients)
+    return [] if ingridients.nil?
+    ingridients.split(/\s*,\s*/)
+  end
 
   def recipes_list(response)
     {
@@ -42,8 +45,12 @@ class Elasticsearch::IngridientsQuery < Elasticsearch::Base
   def query
     {
       query: {
-        match_all: {}
-      }
+        terms: {
+          "ingredients.keyword": @ingridients,
+          boost: 1.0
+        }
+      },
+      size: 1000
     }
   end
 end

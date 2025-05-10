@@ -6,7 +6,10 @@ class PagesController < ApplicationController
     # if params[:ingredients].present?
       elasticsearch = Elasticsearch::IngridientsQuery.new(params[:ingredients])
       elasticsearch.response
-      @recipes = elasticsearch.result
+      @total_recipes = elasticsearch.result[:total]
+
+      # binding.pry
+      @recipes = Kaminari.paginate_array(elasticsearch.result[:recipes]).page(params[:page]).per(3)
       # binding.pry
 
     # else

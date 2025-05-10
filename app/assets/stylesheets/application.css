@@ -70,3 +70,12 @@ html {
 .list-recipe {
   padding: 5px 0;
 }
+
+.pagination {
+  padding: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+}

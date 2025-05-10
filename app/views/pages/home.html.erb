@@ -21,11 +21,11 @@
 
 <div class="results-container">
   <div class="results-total">
-    Recipes: <%= @recipes[:total] %>
+    Recipes: <%= @total_recipes %>
   </div>
 
   <div class="results-recipes">
-    <% @recipes[:recipes].each do |recipe| %>
+    <% @recipes.each do |recipe| %>
       <ul class="list-recipes">
         <li class="list-recipe">
           <b>Title:</b> <%= recipe[:title] %>
@@ -65,4 +65,8 @@
       </ul>
     <% end %>
   </div>
+</div>
+
+<div>
+  <%= paginate @recipes %>
 </div>

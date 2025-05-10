@@ -1,7 +1,7 @@
 class Elasticsearch::Base
   def search
     if Rails.env.production?
-      # client = Elasticsearch::Client.new(url: ENV.fetch("BONSAI_URL"), log: true)
+      client = Elasticsearch::Client.new(url: ENV.fetch("BONSAI_URL"), log: true)
     else
       client = Elasticsearch::Client.new(log: true)
     end

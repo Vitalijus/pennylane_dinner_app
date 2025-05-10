@@ -1,11 +1,68 @@
-<h6>Home page</h6>
+<div class="search-container">
+  <div class="search-header">
+    Type in comma separated ingridients e.g.: 1 cup all-purpose flour, 1 cup yellow cornmeal, bread
+  </div>
 
-<% @recipes[:recipes].each do |recipe| %>
-  <div><%= recipe[:title] %></div>
-<% end %>
+  <div class="search-form">
+    <%= form_with(url: root_url, method: 'get') do |form| %>
+      <div class="search-field">
+        <div class="field-label">
+          Ingridients:
+        </div>
+        <%= form.text_field :ingredients, class: "search-form-field", placeholder: "1 cup yellow cornmeal, bread" %>
+      </div>
 
-<%= form_with(url: root_url, method: 'get') do |form| %>
-  <%= form.text_field :ingredients %>
+      <div class="search-btn">
+        <%= form.submit "Submit", class: "submit-btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>
 
-  <%= form.submit "Submit" %>
-<% end %>
+<div class="results-container">
+  <div class="results-total">
+    Recipes: <%= @recipes[:total] %>
+  </div>
+
+  <div class="results-recipes">
+    <% @recipes[:recipes].each do |recipe| %>
+      <ul class="list-recipes">
+        <li class="list-recipe">
+          <b>Title:</b> <%= recipe[:title] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Cook time:</b> <%= recipe[:cook_time] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Prep time:</b> <%= recipe[:prep_time] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Ingridients:</b> <%= recipe[:ingredients].join(", ") %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Ratings:</b> <%= recipe[:ratings] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Cuisine:</b> <%= recipe[:cuisine] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Category:</b> <%= recipe[:category] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Author:</b> <%= recipe[:author] %>
+        </li>
+
+        <li class="list-recipe">
+          <b>Image:</b> <%= recipe[:image] %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>

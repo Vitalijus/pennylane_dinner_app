@@ -8,3 +8,65 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+html {
+  background-color: #d9d9d9;
+}
+
+.search-container {
+  max-width: 760px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+}
+
+.search-header {
+  padding: 5px;
+}
+
+.field-label {
+  text-align: left;
+  padding-bottom: 3px;
+}
+
+.search-form-field {
+  padding: 10px;
+  width: calc(100% - 25px);
+}
+
+.search-btn {
+  margin-top: 10px;
+}
+
+.submit-btn {
+  padding: 10px;
+  width: 100%;
+}
+
+.results-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.results-total {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+}
+
+.results-recipes {
+
+}
+
+.list-recipes {
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #d0d0d0;
+}
+
+.list-recipe {
+  padding: 5px 0;
+}

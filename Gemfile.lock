@@ -100,18 +100,18 @@ GEM
       railties (>= 6.1)
     drb (2.2.1)
     ed25519 (1.4.0)
-    elasticsearch (7.4.0)
-      elasticsearch-api (= 7.4.0)
-      elasticsearch-transport (= 7.4.0)
-    elasticsearch-api (7.4.0)
+    elastic-transport (8.4.0)
+      faraday (< 3)
       multi_json
-    elasticsearch-model (7.2.1)
+    elasticsearch (8.18.0)
+      elastic-transport (~> 8.3)
+      elasticsearch-api (= 8.18.0)
+    elasticsearch-api (8.18.0)
+      multi_json
+    elasticsearch-model (8.0.0)
       activesupport (> 3)
-      elasticsearch (~> 7)
+      elasticsearch (~> 8)
       hashie
-    elasticsearch-transport (7.4.0)
-      faraday
-      multi_json
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
@@ -141,7 +141,7 @@ GEM
     jbuilder (2.13.0)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
-    json (2.11.3)
+    json (2.12.0)
     kamal (2.5.3)
       activesupport (>= 7.0)
       base64 (~> 0.2)
@@ -402,7 +402,7 @@ DEPENDENCIES
   brakeman
   debug
   dotenv-rails
-  elasticsearch (< 7.14)
+  elasticsearch (< 8.19)
   elasticsearch-model
   importmap-rails
   jbuilder

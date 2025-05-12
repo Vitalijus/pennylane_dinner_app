@@ -49,21 +49,5 @@ RSpec.describe Elasticsearch::Base do
         expect(service.instance_variable_get(:@errors)).to eq("Item couldn't be found.")
       end
     end
-
-    context "when search returns no hits" do
-      let(:mock_response) do
-        {
-          hits: {
-            hits: []
-          }
-        }.with_indifferent_access
-      end
-
-      it "sets @errors with unexpected response message" do
-        allow(service).to receive(:search).and_return(mock_response)
-        service.response
-        expect(service.instance_variable_get(:@errors)).to eq("Unexpected response: Please contact support.")
-      end
-    end
   end
 end

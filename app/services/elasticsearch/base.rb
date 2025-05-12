@@ -9,13 +9,7 @@ class Elasticsearch::Base
   def response
     res = search
     return @errors = "Item couldn't be found." if res.nil?
-
-    hits = res.with_indifferent_access.dig(:hits, :hits)
-    if hits.present?
-      @result = recipes_list(res.with_indifferent_access)
-    else
-      @errors = "Unexpected response: Please contact support."
-    end
+    @result = recipes_list(res.with_indifferent_access)
   end
 
   private

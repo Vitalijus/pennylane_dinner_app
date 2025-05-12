@@ -24,49 +24,53 @@
     Recipes: <%= @total_recipes %>
   </div>
 
-  <div class="results-recipes">
-    <% @recipes.each do |recipe| %>
-      <ul class="list-recipes">
-        <li class="list-recipe">
-          <b>Title:</b> <%= recipe[:title] %>
-        </li>
+  <% if @errors.present? %>
+    <%= @errors %>
+  <% else %>
+    <div class="results-recipes">
+      <% @recipes.each do |recipe| %>
+        <ul class="list-recipes">
+          <li class="list-recipe">
+            <b>Title:</b> <%= recipe[:title] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Cook time:</b> <%= recipe[:cook_time] %>
-        </li>
+          <li class="list-recipe">
+            <b>Cook time:</b> <%= recipe[:cook_time] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Prep time:</b> <%= recipe[:prep_time] %>
-        </li>
+          <li class="list-recipe">
+            <b>Prep time:</b> <%= recipe[:prep_time] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Ingridients:</b> <%= recipe[:ingredients].join(", ") %>
-        </li>
+          <li class="list-recipe">
+            <b>Ingridients:</b> <%= recipe[:ingredients].join(", ") %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Ratings:</b> <%= recipe[:ratings] %>
-        </li>
+          <li class="list-recipe">
+            <b>Ratings:</b> <%= recipe[:ratings] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Cuisine:</b> <%= recipe[:cuisine] %>
-        </li>
+          <li class="list-recipe">
+            <b>Cuisine:</b> <%= recipe[:cuisine] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Category:</b> <%= recipe[:category] %>
-        </li>
+          <li class="list-recipe">
+            <b>Category:</b> <%= recipe[:category] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Author:</b> <%= recipe[:author] %>
-        </li>
+          <li class="list-recipe">
+            <b>Author:</b> <%= recipe[:author] %>
+          </li>
 
-        <li class="list-recipe">
-          <b>Image:</b> <%= recipe[:image] %>
-        </li>
-      </ul>
-    <% end %>
+          <li class="list-recipe">
+            <b>Image:</b> <%= recipe[:image] %>
+          </li>
+        </ul>
+      <% end %>
+    </div>
   </div>
-</div>
 
-<div>
-  <%= paginate @recipes %>
-</div>
+  <div>
+    <%= paginate @recipes %>
+  </div>
+<% end %>

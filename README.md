@@ -3,6 +3,16 @@
 ## Purpose
 Coming up with meal ideas can be tricky when all you have is a fridge full of random ingredients. This app makes it easy — just enter the ingredients you have, and we'll find the best matching recipes for you. No more food waste or mealtime indecision!
 
+## User Story 1: Find Recipes with Available Ingredients
+**As a** home cook
+**I want to** enter a list of ingredients I currently have
+**So that** I can discover recipes I can cook without buying more groceries.
+
+## User Story 2: See the Most Relevant Recipes First
+**As a** user searching for recipes
+**I want** to see the most relevant recipes based on my ingredients ranked by best match
+**So that** I can quickly choose the most suitable recipe for dinner
+
 ## Getting Started
 Visit running app on: https://dinner-app-f1dcb3f1cc03.herokuapp.com/.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.

@@ -4,7 +4,7 @@
 Coming up with meal ideas can be tricky when all you have is a fridge full of random ingredients. This app makes it easy — just enter the ingredients you have, and we'll find the best matching recipes for you. No more food waste or mealtime indecision!
 
 ## Getting Started
-Visit running app on: https://dinner-app-f1dcb3f1cc03.herokuapp.com/
+Visit running app on: https://dinner-app-f1dcb3f1cc03.herokuapp.com/.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ## Prerequisites
@@ -59,5 +59,3 @@ bundle exec rspec
 
 - **Vitalijus Desukas** - _Backend engineer_ -
   [Vitalijus](https://github.com/Vitalijus)
-
-## Main technologies

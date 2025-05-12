@@ -40,7 +40,7 @@ gem "thruster", require: false
 
 # ElasticSearch
 gem "elasticsearch-model"
-gem "elasticsearch", "< 7.14"
+gem "elasticsearch", "< 8.19"
 
 gem 'kaminari'
 

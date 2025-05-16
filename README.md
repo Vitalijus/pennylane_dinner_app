@@ -1,5 +1,8 @@
 <img alt="Rails" src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"/> <img alt="Postgres" src ="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"/> <img alt="ElasticSearch" src="https://img.shields.io/badge/-ElasticSearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white"/>
 
+## Pennylane.com
+This app is a technical assignment by pennylane.com. I did not pass the interview, but you can use the app as a base and improve it further. Good luck!
+
 ## Purpose
 Coming up with meal ideas can be tricky when all you have is a fridge full of random ingredients. This app makes it easy — just enter the ingredients you have, and we'll find the best matching recipes for you. No more food waste or mealtime indecision!
 
